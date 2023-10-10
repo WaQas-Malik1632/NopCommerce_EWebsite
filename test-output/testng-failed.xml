@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestCases_Package.ReviewPageTestCases">
+      <class name="TestCases_Package.OrderAndCartPageTestCases">
         <methods>
-          <include name="beforeMethod"/>
-          <include name="DeskReview"/>
+          <include name="initiateBrowser"/>
+          <include name="VerifyplaceOrderofComputer"/>
           <include name="Teardown"/>
         </methods>
-      </class> <!-- TestCases_Package.ReviewPageTestCases -->
+      </class> <!-- TestCases_Package.OrderAndCartPageTestCases -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

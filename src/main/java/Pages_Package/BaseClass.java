@@ -16,54 +16,51 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class BaseClass 
-{
+public class BaseClass {
 	public WebDriver driver;
-	public String Url="https://demo.nopcommerce.com/";
-	
+	public String Url = "https://demo.nopcommerce.com/";
+
 	public static ThreadLocal<WebDriver> tdriver = new ThreadLocal<WebDriver>();
-	
+
 	LocalDateTime date = LocalDateTime.now();
-	
-	 DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("dd_MM_yyyy_HH-mm-ss");
-	 String formattedDate = date.format(myFormatObj);
-	
-	public WebDriver Setup_Browser()
-	{
+
+	DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("dd_MM_yyyy_HH-mm-ss");
+	String formattedDate = date.format(myFormatObj);
+
+	public WebDriver Setup_Browser() {
 		WebDriverManager.chromedriver().setup();
-		ChromeDriver driver=new ChromeDriver();
+		ChromeDriver driver = new ChromeDriver();
 		driver.get(Url);
 		driver.manage().window().maximize();
-		
-		//Click on login button first
-	    WebElement login=driver.findElement(By.xpath("\"/html/body/div[6]/div[1]/div[1]/div[2]/div[1]/ul/li[2]/a\""));		
-	    
+
+		// Pre-requisite for login==>Click on login button first
+		WebElement login = driver.findElement(By.xpath("//a[@class='ico-login']"));
+		login.click();
+
 		return driver;
-		
-		
+
 	}
 
- 	public WebDriver Setup_HeadlessBrowser()
-	{
- 		WebDriverManager.chromedriver().setup();
-		ChromeOptions options=new ChromeOptions();
+	public WebDriver Setup_HeadlessBrowser() {
+		WebDriverManager.chromedriver().setup();
+		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--headless");
 		options.addArguments("-incognito");
 		options.addArguments("disable-popup-blocking");
-		options.addArguments("--headless", "--window-size=1920,1200","--ignore-certificate-errors");
-		
-		WebDriver driver=new ChromeDriver(options);
-		
+		options.addArguments("--headless", "--window-size=1920,1200", "--ignore-certificate-errors");
+
+		WebDriver driver = new ChromeDriver(options);
+
 		driver.get(Url);
-		driver.manage().window().maximize();  
+		driver.manage().window().maximize();
 		return driver;
 	}
- 	//Take Screenshot
- 	public WebDriver TakeScreenshot(WebDriver webdriver, String filename) throws IOException
-	{   
-		TakesScreenshot src=((TakesScreenshot)webdriver);
-		File srcfile =src.getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(srcfile,new File(".//Screenshot//" +formattedDate+filename+".png"));
+
+	// Take Screenshot
+	public WebDriver TakeScreenshot(WebDriver webdriver, String filename) throws IOException {
+		TakesScreenshot src = ((TakesScreenshot) webdriver);
+		File srcfile = src.getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(srcfile, new File(".//Screenshot//" + formattedDate + filename + ".png"));
 		return webdriver;
 	}
 
