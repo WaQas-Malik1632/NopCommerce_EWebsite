@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="0" failed="0" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-10-10T01:13:12 PKT" name="Default suite" finished-at="2023-10-10T01:13:22 PKT" duration-ms="9580">
+  <suite started-at="2023-10-11T00:08:36 PKT" name="Default suite" finished-at="2023-10-11T00:08:45 PKT" duration-ms="9097">
     <groups>
     </groups>
-    <test started-at="2023-10-10T01:13:12 PKT" name="Default test" finished-at="2023-10-10T01:13:22 PKT" duration-ms="9580">
-      <class name="TestCases_Package.ReviewPageTestCases">
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:TestCases_Package.ReviewPageTestCases@31d0e481]" started-at="2023-10-10T01:13:13 PKT" name="beforeMethod" finished-at="2023-10-10T01:13:22 PKT" duration-ms="9097" status="FAIL">
+    <test started-at="2023-10-11T00:08:36 PKT" name="Default test" finished-at="2023-10-11T00:08:45 PKT" duration-ms="9097">
+      <class name="TestCases_Package.LoginTestcases">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:TestCases_Package.LoginTestcases@59252cb6]" started-at="2023-10-11T00:08:36 PKT" name="beforeMethod" finished-at="2023-10-11T00:08:44 PKT" duration-ms="8503" status="FAIL">
           <exception class="org.openqa.selenium.InvalidSelectorException">
             <message>
               <![CDATA[invalid selector: Unable to locate an element with the xpath expression "/html/body/div[6]/div[1]/div[1]/div[2]/div[1]/ul/li[2]/a" because of the following error:
@@ -17,8 +17,8 @@ For documentation on this error, please visit: https://www.seleniumhq.org/except
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'DESKTOP-2QTKDAK', ip: '192.168.1.17', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.150, chrome: {chromedriverVersion: 117.0.5938.149 (e3344ddefa1..., userDataDir: C:\Users\malik\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58311}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 70f0abdf432e8f9217d256bd2a898320
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.150, chrome: {chromedriverVersion: 117.0.5938.149 (e3344ddefa1..., userDataDir: C:\Users\malik\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50831}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e21c2801cb7ec1ee6b749d2c4a49ffee
 *** Element info: {Using=xpath, value="/html/body/div[6]/div[1]/div[1]/div[2]/div[1]/ul/li[2]/a"}]]>
             </message>
             <full-stacktrace>
@@ -29,8 +29,8 @@ For documentation on this error, please visit: https://www.seleniumhq.org/except
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'DESKTOP-2QTKDAK', ip: '192.168.1.17', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.150, chrome: {chromedriverVersion: 117.0.5938.149 (e3344ddefa1..., userDataDir: C:\Users\malik\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58311}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 70f0abdf432e8f9217d256bd2a898320
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.150, chrome: {chromedriverVersion: 117.0.5938.149 (e3344ddefa1..., userDataDir: C:\Users\malik\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50831}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e21c2801cb7ec1ee6b749d2c4a49ffee
 *** Element info: {Using=xpath, value="/html/body/div[6]/div[1]/div[1]/div[2]/div[1]/ul/li[2]/a"}
 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
@@ -46,7 +46,7 @@ at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver
 at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 at Pages_Package.BaseClass.Setup_Browser(BaseClass.java:39)
-at TestCases_Package.ReviewPageTestCases.beforeMethod(ReviewPageTestCases.java:31)
+at TestCases_Package.LoginTestcases.beforeMethod(LoginTestcases.java:26)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -75,7 +75,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="DeskReview()[pri:1, instance:TestCases_Package.ReviewPageTestCases@31d0e481]" started-at="2023-10-10T01:13:22 PKT" name="DeskReview" description="Login Test#2" finished-at="2023-10-10T01:13:22 PKT" duration-ms="0" status="SKIP">
+        <test-method signature="Testcase_VerifyLoginwith_bothWrongEmailandPassword_SignupNewForAccount()[pri:1, instance:TestCases_Package.LoginTestcases@59252cb6]" started-at="2023-10-11T00:08:45 PKT" name="Testcase_VerifyLoginwith_bothWrongEmailandPassword_SignupNewForAccount" description="Login Test#2" finished-at="2023-10-11T00:08:45 PKT" duration-ms="0" status="SKIP">
           <exception class="org.openqa.selenium.InvalidSelectorException">
             <message>
               <![CDATA[invalid selector: Unable to locate an element with the xpath expression "/html/body/div[6]/div[1]/div[1]/div[2]/div[1]/ul/li[2]/a" because of the following error:
@@ -85,8 +85,8 @@ For documentation on this error, please visit: https://www.seleniumhq.org/except
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'DESKTOP-2QTKDAK', ip: '192.168.1.17', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.150, chrome: {chromedriverVersion: 117.0.5938.149 (e3344ddefa1..., userDataDir: C:\Users\malik\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58311}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 70f0abdf432e8f9217d256bd2a898320
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.150, chrome: {chromedriverVersion: 117.0.5938.149 (e3344ddefa1..., userDataDir: C:\Users\malik\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50831}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e21c2801cb7ec1ee6b749d2c4a49ffee
 *** Element info: {Using=xpath, value="/html/body/div[6]/div[1]/div[1]/div[2]/div[1]/ul/li[2]/a"}]]>
             </message>
             <full-stacktrace>
@@ -97,8 +97,8 @@ For documentation on this error, please visit: https://www.seleniumhq.org/except
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'DESKTOP-2QTKDAK', ip: '192.168.1.17', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.150, chrome: {chromedriverVersion: 117.0.5938.149 (e3344ddefa1..., userDataDir: C:\Users\malik\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58311}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 70f0abdf432e8f9217d256bd2a898320
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.150, chrome: {chromedriverVersion: 117.0.5938.149 (e3344ddefa1..., userDataDir: C:\Users\malik\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50831}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e21c2801cb7ec1ee6b749d2c4a49ffee
 *** Element info: {Using=xpath, value="/html/body/div[6]/div[1]/div[1]/div[2]/div[1]/ul/li[2]/a"}
 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
@@ -114,7 +114,7 @@ at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver
 at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 at Pages_Package.BaseClass.Setup_Browser(BaseClass.java:39)
-at TestCases_Package.ReviewPageTestCases.beforeMethod(ReviewPageTestCases.java:31)
+at TestCases_Package.LoginTestcases.beforeMethod(LoginTestcases.java:26)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -142,12 +142,12 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- org.openqa.selenium.InvalidSelectorException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- DeskReview -->
-        <test-method is-config="true" signature="Teardown()[pri:0, instance:TestCases_Package.ReviewPageTestCases@31d0e481]" started-at="2023-10-10T01:13:22 PKT" name="Teardown" finished-at="2023-10-10T01:13:22 PKT" duration-ms="0" status="SKIP">
+        </test-method> <!-- Testcase_VerifyLoginwith_bothWrongEmailandPassword_SignupNewForAccount -->
+        <test-method is-config="true" signature="Teardown()[pri:0, instance:TestCases_Package.LoginTestcases@59252cb6]" started-at="2023-10-11T00:08:45 PKT" name="Teardown" finished-at="2023-10-11T00:08:45 PKT" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Teardown -->
-      </class> <!-- TestCases_Package.ReviewPageTestCases -->
+      </class> <!-- TestCases_Package.LoginTestcases -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
