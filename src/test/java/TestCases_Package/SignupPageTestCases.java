@@ -28,15 +28,18 @@ public class SignupPageTestCases extends BaseClass {
 	public void Testcases_ToRegisterUserSuccessfully() throws IOException {
 
 		register.Precondition();
-		register.SignUp_Form("Test", "user", "Test123@gmail.com", "TestComp", "Test@123", "Test@123");
+		register.SignUp_Form("Test", "user", "Test@gmail.com", "TestComp", "Test@123", "Test@123");
+
+		// Verify page title is matched "nopCommerce demo store"
+		Assert.assertEquals(driver.getTitle(), "nopCommerce demo store");
 
 		String actual_url = driver.getCurrentUrl();
-		String expected_url = "https://demo.nopcommerce.com/registerresu";
+		String expected_url = "https://demo.nopcommerce.com/";
 		Assert.assertEquals(actual_url, expected_url);
 		if (actual_url == expected_url) {
 			driver = super.TakeScreenshot(driver, "Imagescreenshot");
 		}
-		// Assert.assertEquals(true, driver.getTitle(), "nopcommerce");
+
 	}
 
 	@AfterTest
