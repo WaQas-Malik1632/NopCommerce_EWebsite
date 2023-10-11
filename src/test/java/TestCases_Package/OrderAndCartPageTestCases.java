@@ -27,7 +27,7 @@ public class OrderAndCartPageTestCases extends BaseClass {
 
 	@Test
 	public void VerifyplaceOrderofComputer() throws InterruptedException {
-		// order.PlaceOrderofDesktop();
+	//	order.PlaceOrderofDesktop();
 		order.PlaceOrderofAppleNotebook();
 		order.PlaceOrderofNokiaPhone();
 		order.viewCart();

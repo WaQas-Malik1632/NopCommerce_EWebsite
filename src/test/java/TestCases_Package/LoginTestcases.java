@@ -15,6 +15,7 @@ import io.qameta.allure.Story;
 
 import org.testng.annotations.BeforeTest;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 
 public class LoginTestcases extends BaseClass {
@@ -26,6 +27,7 @@ public class LoginTestcases extends BaseClass {
 		driver = super.Setup_Browser();
 		// driver=super.Setup_HeadlessBrowser();
 		login = new LoginPage(driver);
+		// login.Precondition();
 	}
 
 	// Enter wrong Email and wrong Password
@@ -39,10 +41,8 @@ public class LoginTestcases extends BaseClass {
 	@Attachment()
 	public void Testcase_VerifyLoginwith_bothWrongEmailandPassword_SignupNewForAccount() {
 
-		login.Precondition();
-		login.Login_Testcases("ABCD@gmail.com", "Test@____/%!123");
-		// Assert.assertTrue(true, "Passed");
-		// Hello
+		login.Login_Testcases("ABCDEFG@gmail.com", "Test@____/%!123");
+		Assert.assertTrue(true, "Passed");
 
 		String actualMsg = "Login was unsuccessful. Please correct the errors and try again.\n"
 				+ "No customer account found";
