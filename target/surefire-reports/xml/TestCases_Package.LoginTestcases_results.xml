@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Test"
+           tests="5"
+           failures="0"
+           errors="0"
+           skipped="5"
+           time="0.000">
+  <properties />
+  
+            <testcase name="Teardown" time="0.0" classname="TestCases_Package.LoginTestcases">
+          <skipped />
+    </testcase>
+            <testcase name="Testcase_VerifyLoginwith_bothWrongEmailandPassword" time="0.0" classname="TestCases_Package.LoginTestcases">
+          <skipped />
+    </testcase>
+            <testcase name="usingSession_VerifyUserDoesnotExistInSystem_SignupNewForAccount" time="0.0" classname="TestCases_Package.LoginTestcases">
+          <skipped />
+    </testcase>
+            <testcase name="Testcase_VerifyLoginwith_bothCorrectEmailandPassword" time="0.0" classname="TestCases_Package.LoginTestcases">
+          <skipped />
+    </testcase>
+            <testcase name="Verify_UserDoesnotExistInSystem_SignupNewForAccount" time="0.0" classname="TestCases_Package.LoginTestcases">
+          <skipped />
+    </testcase>
+  
+  
+</testsuite>

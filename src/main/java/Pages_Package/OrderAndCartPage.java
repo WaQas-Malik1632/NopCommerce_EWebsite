@@ -10,7 +10,7 @@ import org.openqa.selenium.interactions.Actions;
 
 public class OrderAndCartPage {
 
-	WebDriver driver;
+	private WebDriver driver;
 	// =======================All menu items are initialized here=================================================
 	By Computers = By.xpath("//ul[@class='top-menu notmobile']//a[normalize-space()='Computers']");
 	By Electronics = By.xpath("//ul[@class='top-menu notmobile']//a[normalize-space()='Electronics']");

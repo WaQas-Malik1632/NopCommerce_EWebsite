@@ -20,7 +20,7 @@ public class ProdutctListingPageTestCases {
 	}
 
 	@Test
-	public void f() {
+	public void Testcase() {
 	}
 
 	@AfterTest

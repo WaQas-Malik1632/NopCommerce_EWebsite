@@ -39,12 +39,10 @@ public class SignupPageTestCases extends BaseClass {
 		if (actual_url == expected_url) {
 			driver = super.TakeScreenshot(driver, "Imagescreenshot");
 		}
-
 	}
 
 	@AfterTest
 	public void Teardown() {
 		System.out.print("Current Page Name is: " + driver.getTitle() + "\n" + driver.getCurrentUrl() + "\n");
 	}
-
 }
