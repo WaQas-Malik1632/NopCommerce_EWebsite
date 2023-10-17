@@ -10,7 +10,7 @@ import org.openqa.selenium.interactions.Actions;
 
 public class OrderAndCartPage {
 
-	WebDriver driver;
+	private WebDriver driver;
 	// =======================All menu items are initialized here=================================================
 	By Computers = By.xpath("//ul[@class='top-menu notmobile']//a[normalize-space()='Computers']");
 	By Electronics = By.xpath("//ul[@class='top-menu notmobile']//a[normalize-space()='Electronics']");
@@ -36,7 +36,7 @@ public class OrderAndCartPage {
 	// ==============Apple's relevent details==================
 	By Apple_MacBook_Pro_13_inch = By.xpath("//img[@title='Show details for Apple MacBook Pro 13-inch']");
 	By AppleAddToCartButton = By.xpath("//button[@id='add-to-cart-button-4']");
-	By AppleShoppingCart = By.xpath("//a[normalize-space()='shopping cart']");
+	By AppleShoppingCart = By.xpath("//span[@class='cart-label']");
 
 	// =============Desktops relevent details====================
 	By Lenovo_IdeaCentrePC = By.xpath("//div[@class='picture']//img[@title='Show details for Lenovo IdeaCentre 600 All-in-One PC']");

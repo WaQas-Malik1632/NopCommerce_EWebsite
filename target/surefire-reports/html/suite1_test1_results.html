@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="" lang="">
+<head>
+  <title>Test Results Report - Test</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="description" content="TestNG unit test results." />
+  <link href="reportng.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="reportng.js"></script>
+</head>
+<body>
+<h1>Test</h1>
+<p>
+  Test duration: 13.997s
+</p>
+
+  <table class="resultsTable configTable">
+    <tr><th colspan="3" class="header failedConfig">Failed Configuration</th></tr>
+              <tr class="group">
+        <td colspan="3">TestCases_Package.OrderAndCartPageTestCases</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  initiateBrowser
+      </td>
+  <td class="duration">
+    3.527s
+  </td>
+  <td class="result">
+        
+    
+        
+
+        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>org.openqa.selenium.WebDriverException: java.net.ConnectException: Failed to connect to localhost/[0:0:0:0:0:0:0:1]:7750<br/>
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;<br/>
+System info: host: &apos;NX00605&apos;, ip: &apos;10.44.0.45&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;<br/>
+Driver info: driver.version: RemoteWebDriver</b></a><br />
+    <div class="stackTrace" id="exception-0">
+              org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:92)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)<br />
+              Pages_Package.BaseClass.Setup_Browser(BaseClass.java:33)<br />
+              TestCases_Package.OrderAndCartPageTestCases.initiateBrowser(OrderAndCartPageTestCases.java:23)<br />
+              java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)<br />
+              java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.base/java.lang.reflect.Method.invoke(Method.java:568)<br />
+              org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)<br />
+              org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)<br />
+              org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)<br />
+              org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)<br />
+              org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:663)<br />
+              org.testng.TestRunner.beforeRun(TestRunner.java:652)<br />
+              org.testng.TestRunner.run(TestRunner.java:614)<br />
+              org.testng.SuiteRunner.runTest(SuiteRunner.java:443)<br />
+              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)<br />
+              org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)<br />
+              org.testng.SuiteRunner.run(SuiteRunner.java:336)<br />
+              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
+              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)<br />
+              org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)<br />
+              org.testng.TestNG.runSuitesLocally(TestNG.java:1200)<br />
+              org.testng.TestNG.runSuites(TestNG.java:1114)<br />
+              org.testng.TestNG.run(TestNG.java:1082)<br />
+              org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:284)<br />
+              org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)<br />
+              org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:119)<br />
+              org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:428)<br />
+              org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)<br />
+              org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:562)<br />
+              org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:548)<br />
+                    <b>Caused by: </b> <a href="javascript:toggleElement('exception-1', 'block')" title="Click to expand/collapse">java.net.ConnectException: Failed to connect to localhost/[0:0:0:0:0:0:0:1]:7750</a><br />
+        <div class="stackTrace" id="exception-1">
+                      okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:247)<br />
+                      okhttp3.internal.connection.RealConnection.connect(RealConnection.java:165)<br />
+                      okhttp3.internal.connection.StreamAllocation.findConnection(StreamAllocation.java:257)<br />
+                      okhttp3.internal.connection.StreamAllocation.findHealthyConnection(StreamAllocation.java:135)<br />
+                      okhttp3.internal.connection.StreamAllocation.newStream(StreamAllocation.java:114)<br />
+                      okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.java:42)<br />
+                      okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)<br />
+                      okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)<br />
+                      okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.java:93)<br />
+                      okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)<br />
+                      okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)<br />
+                      okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.java:93)<br />
+                      okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)<br />
+                      okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.java:126)<br />
+                      okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)<br />
+                      okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)<br />
+                      okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:200)<br />
+                      okhttp3.RealCall.execute(RealCall.java:77)<br />
+                      org.openqa.selenium.remote.internal.OkHttpClient.execute(OkHttpClient.java:103)<br />
+                      org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:155)<br />
+                      org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)<br />
+                      org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)<br />
+                      org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)<br />
+                      Pages_Package.BaseClass.Setup_Browser(BaseClass.java:33)<br />
+                      TestCases_Package.OrderAndCartPageTestCases.initiateBrowser(OrderAndCartPageTestCases.java:23)<br />
+                      java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+                      java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)<br />
+                      java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+                      java.base/java.lang.reflect.Method.invoke(Method.java:568)<br />
+                      org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)<br />
+                      org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)<br />
+                      org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)<br />
+                      org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)<br />
+                      org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:663)<br />
+                      org.testng.TestRunner.beforeRun(TestRunner.java:652)<br />
+                      org.testng.TestRunner.run(TestRunner.java:614)<br />
+                      org.testng.SuiteRunner.runTest(SuiteRunner.java:443)<br />
+                      org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)<br />
+                      org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)<br />
+                      org.testng.SuiteRunner.run(SuiteRunner.java:336)<br />
+                      org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
+                      org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)<br />
+                      org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)<br />
+                      org.testng.TestNG.runSuitesLocally(TestNG.java:1200)<br />
+                      org.testng.TestNG.runSuites(TestNG.java:1114)<br />
+                      org.testng.TestNG.run(TestNG.java:1082)<br />
+                      org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:284)<br />
+                      org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)<br />
+                      org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:119)<br />
+                      org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:428)<br />
+                      org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)<br />
+                      org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:562)<br />
+                      org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:548)<br />
+                  </div>
+              <b>Caused by: </b> <a href="javascript:toggleElement('exception-2', 'block')" title="Click to expand/collapse">java.net.ConnectException: Connection refused: no further information</a><br />
+        <div class="stackTrace" id="exception-2">
+                      java.base/sun.nio.ch.Net.pollConnect(Native Method)<br />
+                      java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)<br />
+                      java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)<br />
+                      java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)<br />
+                      java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)<br />
+                      java.base/java.net.Socket.connect(Socket.java:633)<br />
+                      okhttp3.internal.platform.Platform.connectSocket(Platform.java:129)<br />
+                      okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:245)<br />
+                      okhttp3.internal.connection.RealConnection.connect(RealConnection.java:165)<br />
+                      okhttp3.internal.connection.StreamAllocation.findConnection(StreamAllocation.java:257)<br />
+                      okhttp3.internal.connection.StreamAllocation.findHealthyConnection(StreamAllocation.java:135)<br />
+                      okhttp3.internal.connection.StreamAllocation.newStream(StreamAllocation.java:114)<br />
+                      okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.java:42)<br />
+                      okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)<br />
+                      okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)<br />
+                      okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.java:93)<br />
+                      okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)<br />
+                      okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)<br />
+                      okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.java:93)<br />
+                      okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)<br />
+                      okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.java:126)<br />
+                      okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)<br />
+                      okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)<br />
+                      okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:200)<br />
+                      okhttp3.RealCall.execute(RealCall.java:77)<br />
+                      org.openqa.selenium.remote.internal.OkHttpClient.execute(OkHttpClient.java:103)<br />
+                      org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:155)<br />
+                      org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)<br />
+                      org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)<br />
+                      org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)<br />
+                      Pages_Package.BaseClass.Setup_Browser(BaseClass.java:33)<br />
+                      TestCases_Package.OrderAndCartPageTestCases.initiateBrowser(OrderAndCartPageTestCases.java:23)<br />
+                      java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+                      java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)<br />
+                      java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+                      java.base/java.lang.reflect.Method.invoke(Method.java:568)<br />
+                      org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)<br />
+                      org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)<br />
+                      org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)<br />
+                      org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)<br />
+                      org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:663)<br />
+                      org.testng.TestRunner.beforeRun(TestRunner.java:652)<br />
+                      org.testng.TestRunner.run(TestRunner.java:614)<br />
+                      org.testng.SuiteRunner.runTest(SuiteRunner.java:443)<br />
+                      org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)<br />
+                      org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)<br />
+                      org.testng.SuiteRunner.run(SuiteRunner.java:336)<br />
+                      org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
+                      org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)<br />
+                      org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)<br />
+                      org.testng.TestNG.runSuitesLocally(TestNG.java:1200)<br />
+                      org.testng.TestNG.runSuites(TestNG.java:1114)<br />
+                      org.testng.TestNG.run(TestNG.java:1082)<br />
+                      org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:284)<br />
+                      org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)<br />
+                      org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:119)<br />
+                      org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:428)<br />
+                      org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)<br />
+                      org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:562)<br />
+                      org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:548)<br />
+                  </div>
+          </div>
+      </td>
+</tr>
+    
+          <tr><td colspan="3">&nbsp;</td></tr>
+      <tr><td colspan="3" class="header skippedConfig">Skipped Configuration</td></tr>
+                    <tr>
+          <td colspan="3" class="group">TestCases_Package.LoginTestcases</td>
+        </tr>
+                
+<tr>
+  <td class="method">
+                  Teardown
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+              <tr>
+          <td colspan="3" class="group">TestCases_Package.OrderAndCartPageTestCases</td>
+        </tr>
+                
+<tr>
+  <td class="method">
+                  Teardown
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+              <tr>
+          <td colspan="3" class="group">TestCases_Package.ProdutctListingPageTestCases</td>
+        </tr>
+                
+<tr>
+  <td class="method">
+                  TearDown
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  initiateBrowser
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+              <tr>
+          <td colspan="3" class="group">TestCases_Package.ReviewPageTestCases</td>
+        </tr>
+                
+<tr>
+  <td class="method">
+                  Teardown
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  beforeMethod
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+              <tr>
+          <td colspan="3" class="group">TestCases_Package.SignupPageTestCases</td>
+        </tr>
+                
+<tr>
+  <td class="method">
+                  Teardown
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  initiateBrowser
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+            </table>
+
+
+
+  <table class="resultsTable" width="100%">
+    <tr><th colspan="3" class="header skipped">Skipped Tests</th></tr>
+          <tr>
+        <td colspan="3" class="group">TestCases_Package.LoginTestcases</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  <span class="description" title="Login Test#2">Testcase_VerifyLoginwith_bothCorrectEmailandPassword</span>
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="Login Test#1">Testcase_VerifyLoginwith_bothWrongEmailandPassword</span>
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="Login Test#4">Verify_UserDoesnotExistInSystem_SignupNewForAccount</span>
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="Login Test#3">usingSession_VerifyUserDoesnotExistInSystem_SignupNewForAccount</span>
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+          <tr>
+        <td colspan="3" class="group">TestCases_Package.OrderAndCartPageTestCases</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  VerifyplaceOrderofComputer
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+          <tr>
+        <td colspan="3" class="group">TestCases_Package.ProdutctListingPageTestCases</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  f
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+          <tr>
+        <td colspan="3" class="group">TestCases_Package.ReviewPageTestCases</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  <span class="description" title="Login Test#2">userIsAbleToSubmittReviweForDesktop</span>
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+          <tr>
+        <td colspan="3" class="group">TestCases_Package.SignupPageTestCases</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  Testcases_ToRegisterUserSuccessfully
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+      </table>
+
+  
+</body>
+</html>

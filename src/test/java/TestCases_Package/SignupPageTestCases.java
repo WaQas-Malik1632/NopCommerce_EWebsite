@@ -22,6 +22,7 @@ public class SignupPageTestCases extends BaseClass {
 		driver = super.Setup_Browser();
 		// driver=super.Setup_HeadlessBrowser();
 		register = new SignupPage(driver);
+		register.Precondition();
 	}
 
 	@Test
@@ -29,6 +30,8 @@ public class SignupPageTestCases extends BaseClass {
 
 		register.Precondition();
 		register.SignUp_Form("Test", "user", "Test2667@gmail.com", "TestComp", "Test@123", "Test@123");
+
+		register.SignUp_Form("Test", "user", "Test3@gmail.com", "TestComp", "Test@123", "Test@123");
 
 		// Verify page title is matched "nopCommerce demo store"
 		Assert.assertEquals(driver.getTitle(), "nopCommerce demo store");
@@ -39,12 +42,10 @@ public class SignupPageTestCases extends BaseClass {
 		if (actual_url == expected_url) {
 			driver = super.TakeScreenshot(driver, "Imagescreenshot");
 		}
-
 	}
 
 	@AfterTest
 	public void Teardown() {
 		System.out.print("Current Page Name is: " + driver.getTitle() + "\n" + driver.getCurrentUrl() + "\n");
 	}
-
 }

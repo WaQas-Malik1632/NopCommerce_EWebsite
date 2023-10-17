@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class LoginPage {
-	WebDriver driver;
+	private WebDriver driver;
 
 	By click_login = By.xpath("/html/body/div[6]/div[1]/div[1]/div[2]/div[1]/ul/li[2]/a");
 	By txt_email = By.id("Email");
@@ -35,8 +35,9 @@ public class LoginPage {
 
 		WebElement b1 = driver.findElement(btn_login);
 		b1.click();
-		// String actualMsg=b1.getText();
-		// b1.getScreenshotAs(OutputType.FILE);
+
+		
+		// u1.getScreenshotAs(OutputType.FILE);
 
 		String actualUrl = driver.getCurrentUrl();
 		String expectrdUrl = "https://demo.nopcommerce.com/";
@@ -49,11 +50,4 @@ public class LoginPage {
 
 		return cond;
 	}
-
-	public void RedirectLogin_forSignup() {
-		SignupPage Register = new SignupPage(driver);
-		Register.Precondition();
-		Register.SignUp_Form("Test", "user", "Test5@gmail.com", "TestComp", "Test@123", "Test@123");
-	}
-
 }

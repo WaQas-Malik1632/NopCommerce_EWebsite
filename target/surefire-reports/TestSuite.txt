@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 17, Failures: 1, Errors: 0, Skipped: 16, Time elapsed: 15.944 s <<< FAILURE! - in TestSuite
+TestCases_Package.OrderAndCartPageTestCases.initiateBrowser  Time elapsed: 15.183 s  <<< FAILURE!
+org.openqa.selenium.WebDriverException: 
+java.net.ConnectException: Failed to connect to localhost/[0:0:0:0:0:0:0:1]:7750
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'NX00605', ip: '10.44.0.45', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
+Driver info: driver.version: RemoteWebDriver
+	at TestCases_Package.OrderAndCartPageTestCases.initiateBrowser(OrderAndCartPageTestCases.java:23)
+Caused by: java.net.ConnectException: Failed to connect to localhost/[0:0:0:0:0:0:0:1]:7750
+	at TestCases_Package.OrderAndCartPageTestCases.initiateBrowser(OrderAndCartPageTestCases.java:23)
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at TestCases_Package.OrderAndCartPageTestCases.initiateBrowser(OrderAndCartPageTestCases.java:23)
+
