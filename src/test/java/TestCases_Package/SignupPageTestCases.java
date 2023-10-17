@@ -28,7 +28,7 @@ public class SignupPageTestCases extends BaseClass {
 	public void Testcases_ToRegisterUserSuccessfully() throws IOException {
 
 		register.Precondition();
-		register.SignUp_Form("Test", "user", "Test@gmail.com", "TestComp", "Test@123", "Test@123");
+		register.SignUp_Form("Test", "user", "Test2667@gmail.com", "TestComp", "Test@123", "Test@123");
 
 		// Verify page title is matched "nopCommerce demo store"
 		Assert.assertEquals(driver.getTitle(), "nopCommerce demo store");

@@ -9,7 +9,6 @@ import Pages_Package.SignupPage;
 import org.testng.annotations.BeforeTest;
 
 import java.io.IOException;
-
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
