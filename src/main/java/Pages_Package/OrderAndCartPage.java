@@ -4,6 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -124,8 +125,19 @@ public class OrderAndCartPage {
 		GotoCartBtn.click();
 
 		JavascriptExecutor js1 = (JavascriptExecutor) driver;
-		js1.executeScript("window.scrollBy(0,600)");
+		js1.executeScript("window.scrollBy(0,200)");
 
+	}
+	public void updateCart()
+	{
+		WebElement UpdateQuantity=driver.findElement(By.xpath("//*[@id=\"itemquantity11220\"]"));
+		UpdateQuantity.click();
+		UpdateQuantity.sendKeys(Keys.BACK_SPACE);
+		UpdateQuantity.sendKeys("4");
+		
+		WebElement UpdateShoppingCart=driver.findElement(By.id("updatecart"));
+		UpdateShoppingCart.click();
+		
 	}
 
 }

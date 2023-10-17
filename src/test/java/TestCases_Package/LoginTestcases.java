@@ -48,8 +48,8 @@ public class LoginTestcases extends BaseClass {
 		login.Precondition();
 		login.Login_Testcases("Test@gmail.com ", "@1**^%$#@$_MALIK");
 
-		  //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		
+		// driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
 		// To validate whether user is successfully Registered or not
 		String ExpectedUrl = "https://demo.nopcommerce.com/login?returnUrl=%2F";
 		if (driver.getCurrentUrl() == ExpectedUrl) {
@@ -66,8 +66,8 @@ public class LoginTestcases extends BaseClass {
 	@Severity(SeverityLevel.CRITICAL)
 	@Attachment()
 	public void Testcase_VerifyLoginwith_bothCorrectEmailandPassword() {
-		driver.manage().timeouts().implicitlyWait(05,TimeUnit.SECONDS);
-		
+		driver.manage().timeouts().implicitlyWait(05, TimeUnit.SECONDS);
+
 		login.Precondition();
 		login.Login_Testcases("Testuser@gmail.com", "Test@123");
 		String ExpectedUrl = "https://demo.nopcommerce.com/";
@@ -86,7 +86,7 @@ public class LoginTestcases extends BaseClass {
 	@Severity(SeverityLevel.CRITICAL)
 	@Attachment()
 	public void usingSession_VerifyUserDoesnotExistInSystem_SignupNewForAccount() {
-		driver.manage().timeouts().implicitlyWait(05,TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(05, TimeUnit.SECONDS);
 		login.Precondition();
 		login.Login_Testcases("ABCDEsFG@gmail.com", "Test@dj/%!123");
 		// Assert.assertTrue(true, "Passed");
@@ -116,7 +116,7 @@ public class LoginTestcases extends BaseClass {
 	@Attachment()
 	public void Verify_UserDoesnotExistInSystem_SignupNewForAccount() {
 		// throw new SkipException("Skipped");
-		driver.manage().timeouts().implicitlyWait(05,TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(05, TimeUnit.SECONDS);
 		login.Precondition();
 		login.Login_Testcases("usernewtest@gmail.com", "ZXCv@123");
 

@@ -66,9 +66,7 @@ public class ReviewPageTestCases extends BaseClass {
 		if (Expected_Url == Actual_Url) {
 			Assert.assertTrue(true, "Reviews has been successfully submitted");
 			
-			
 			//li[normalize-space()='Only registered users can write reviews']
-			
 		}
 	}
 
