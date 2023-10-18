@@ -30,7 +30,7 @@ public class LoginTestcases extends BaseClass {
 	@BeforeTest
 	public void initiateBrowser() {
 		driver = super.Setup_Browser();
-		// driver=super.Setup_HeadlessBrowser();
+//		driver=super.Setup_HeadlessBrowser();
 		login = new LoginPage(driver);
 		register = new SignupPage(driver);
 		register.Precondition();

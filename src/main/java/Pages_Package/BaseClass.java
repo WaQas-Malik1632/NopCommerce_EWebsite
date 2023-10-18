@@ -46,13 +46,8 @@ public class BaseClass {
 		options.addArguments("--headless", "--window-size=1920,1200", "--ignore-certificate-errors");
 
 		WebDriver driver = new ChromeDriver(options);
-
 		driver.get(Url);
 		driver.manage().window().maximize();
-
-		// Pre-requisite for login==>Click on login button first
-		WebElement login = driver.findElement(By.xpath("//a[@class='ico-login']"));
-		login.click();
 
 		return driver;
 	}

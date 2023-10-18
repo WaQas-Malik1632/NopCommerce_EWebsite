@@ -7,13 +7,32 @@
 		<listener class-name="org.uncommons.reportng.HTMLReporter" />
 		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
 	</listeners>
-  <test thread-count="5" name="Test">
-    <classes>
-      <class name="TestCases_Package.LoginTestcases"/>
-      <class name="TestCases_Package.ReviewPageTestCases"/>
-      <class name="TestCases_Package.ProdutctListingPageTestCases"/>
-      <class name="TestCases_Package.SignupPageTestCases"/>
-      <class name="TestCases_Package.OrderAndCartPageTestCases"/>
-    </classes>
-  </test> <!-- Test -->
-</suite> <!-- Suite -->
+
+	<test name="Chrome Test" thread-count="5">
+		<parameter name="Environment" value="Staging Server" />
+		<parameter name="browser" value="Chrome" />
+		<classes>
+			<class name="TestCases_Package.LoginTestcases" />
+			<class name="TestCases_Package.SignupPageTestCases" />
+			<class name="TestCases_Package.OrderAndCartPageTestCases" />
+		</classes>
+	</test>
+
+	<test name="Edge Test" thread-count="2">
+		<parameter name="Environment" value="Production Server" />
+		<parameter name="browser" value="Edge" />
+		<classes>
+			<class name="TestCases_Package.ReviewPageTestCases" />
+		</classes>
+	</test>
+
+	<test name="FirefoxTest">
+		<parameter name="Environment" value="Staging Server" />
+		<parameter name="browser" value="Firefox" />
+		<classes>
+			<class name="TestCases_Package.ProdutctListingPageTestCases" />
+		</classes>
+	</test>
+
+
+</suite> <!--Suite -->
