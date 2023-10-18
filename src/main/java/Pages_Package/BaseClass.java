@@ -13,6 +13,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -34,7 +39,6 @@ public class BaseClass {
 		driver.manage().window().maximize();
 
 		return driver;
-
 	}
 
 	public WebDriver Setup_HeadlessBrowser() {
@@ -52,6 +56,41 @@ public class BaseClass {
 		return driver;
 	}
 
+	public static WebDriver getDriver() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	/*
+	@Parameters("browser")
+	@BeforeTest
+	public WebDriver SetupCrossBrowser(@Optional("defaultBrowser") String browser) {
+		if (browser.equalsIgnoreCase("Firefox")) {
+			WebDriverManager.firefoxdriver().setup();
+			driver = new FirefoxDriver();
+			driver.manage().window().maximize();
+			driver.get(Url);
+
+		} else if (browser.equalsIgnoreCase("Edge")) {
+			WebDriverManager.edgedriver().setup();
+			driver = new EdgeDriver();
+			driver.manage().window().maximize();
+			driver.get(Url);
+		} else if (browser.equalsIgnoreCase("Opera")) {
+			WebDriverManager.operadriver().setup();
+			driver = new EdgeDriver();
+			driver.manage().window().maximize();
+			driver.get(Url);
+		} else {
+			WebDriverManager.chromedriver().setup();
+			driver = new ChromeDriver();
+			driver.manage().window().maximize();
+			driver.get(Url);
+		}
+		return driver;
+	}
+	*/
+
 	// Take Screenshot
 	public WebDriver TakeScreenshot(WebDriver webdriver, String filename) throws IOException {
 		TakesScreenshot src = ((TakesScreenshot) webdriver);
@@ -59,9 +98,5 @@ public class BaseClass {
 		FileUtils.copyFile(srcfile, new File(".//Screenshot//" + formattedDate + filename + ".png"));
 		return webdriver;
 	}
-
-	public static WebDriver getDriver() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	
 }

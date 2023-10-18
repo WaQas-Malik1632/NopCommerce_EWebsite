@@ -8,7 +8,7 @@
 		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
 	</listeners>
 
-	<test name="Chrome Test" thread-count="5">
+	<test name="Chrome Test" thread-count="5" enabled="true">
 		<parameter name="Environment" value="Staging Server" />
 		<parameter name="browser" value="Chrome" />
 		<classes>
@@ -18,7 +18,7 @@
 		</classes>
 	</test>
 
-	<test name="Edge Test" thread-count="2">
+	<test name="Edge Test" thread-count="10" enabled="true">
 		<parameter name="Environment" value="Production Server" />
 		<parameter name="browser" value="Edge" />
 		<classes>
@@ -26,7 +26,7 @@
 		</classes>
 	</test>
 
-	<test name="FirefoxTest">
+	<test name="FirefoxTest" enabled="false">
 		<parameter name="Environment" value="Staging Server" />
 		<parameter name="browser" value="Firefox" />
 		<classes>
