@@ -130,8 +130,9 @@ public class OrderAndCartPage {
 	}
 	public void updateCart()
 	{
-		WebElement UpdateQuantity=driver.findElement(By.xpath("//*[@id=\"itemquantity11220\"]"));
+		WebElement UpdateQuantity=driver.findElement(By.xpath("/html/body/div[6]/div[3]/div/div/div/div[2]/div/form/div[1]/table/tbody/tr/td[5]/input"));
 		UpdateQuantity.click();
+		UpdateQuantity.sendKeys(Keys.CLEAR);
 		UpdateQuantity.sendKeys(Keys.BACK_SPACE);
 		UpdateQuantity.sendKeys("4");
 		

@@ -7,7 +7,7 @@ import org.openqa.selenium.interactions.Actions;
 
 public class ProductReviewsPage {
 	
-	WebDriver driver;
+	private WebDriver driver;
 	
 	By Computers = By.xpath("//ul[@class='top-menu notmobile']//a[normalize-space()='Computers']");
 	By Desktop = By.xpath("//img[@title='Show products in category Desktops']");

@@ -32,15 +32,16 @@ public class ReviewPageTestCases extends BaseClass {
 		login = new LoginPage(driver);
 		login.Precondition();
 		login.Login_Testcases("Test123@gmail.com", "Test@123");
+		register = new SignupPage(driver);
 		reviews = new ProductReviewsPage(driver);
 	}
 
-	@Test(priority = 1, description = "Login Test#2")
-	@Description("Verify test using these credentials: Email:Test@gmail.com  password: @1_)()**^%$#@$msd_MALIK")
-	@Epic("EP001")
-	@Feature("Feature:001")
-	@Story("Login Test")
-	@Step("Use basic steps")
+	@Test(priority = 1, description = "Review Test#1", enabled = true, invocationCount = 1)
+	@Description("Verify test logged in user is able to submit the Review successfully")
+	@Epic("Review_EP001")
+	@Feature("Review_001")
+	@Story("Verify test logged in user is able to submit the Review successfully")
+	@Step("Login>>Home>>Select Computers Category>>Select Apple Notebook>>Select Any Apple Product>>Add Review>>Submit Review")
 	@Severity(SeverityLevel.CRITICAL)
 	@Attachment()
 	public void userIsAbleToSubmittReviweForDesktop() throws InterruptedException {
@@ -65,8 +66,8 @@ public class ReviewPageTestCases extends BaseClass {
 		String Expected_Url = "https://demo.nopcommerce.com/productreviews/3";
 		if (Expected_Url == Actual_Url) {
 			Assert.assertTrue(true, "Reviews has been successfully submitted");
-			
-			//li[normalize-space()='Only registered users can write reviews']
+
+			// li[normalize-space()='Only registered users can write reviews']
 		}
 	}
 

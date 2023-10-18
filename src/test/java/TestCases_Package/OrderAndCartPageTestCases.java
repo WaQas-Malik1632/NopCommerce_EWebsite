@@ -31,62 +31,63 @@ public class OrderAndCartPageTestCases extends BaseClass {
 		// driver=super.Setup_HeadlessBrowser();
 		order = new OrderAndCartPage(driver);
 	}
+
 	@Test(priority = 1, description = "Order Test#1", enabled = true, invocationCount = 1)
-	@Description("Verify test using these credentials: Email:Tteesstt@gmail.com  password: @1**^%$#@$_MALIK")
-	@Epic("EP001")
-	@Feature("Feature:001")
-	@Story("Login Test")
-	@Step("Use basic steps")
+	@Description("Verify that user is able to place order of Apple Note Book sucessfully")
+	@Epic("Order_EP001")
+	@Feature("Order_001")
+	@Story("Verify that user is able to place order of Apple Note Book sucessfully")
+	@Step("Login>>Home>>Select Computers Category>>Select Apple Notebook>>Select Any Apple Product")
 	@Severity(SeverityLevel.CRITICAL)
 	@Attachment()
 	public void VerifyplaceOrderOfAppleLaptop() throws InterruptedException {
 		order.PlaceOrderofAppleNotebook();
 		order.viewCart();
-
 	}
-	@Test(priority = 1, description = "Order Test#2", enabled = false, invocationCount = 1)
-	@Description("Verify test using these credentials: Email:Tteesstt@gmail.com  password: @1**^%$#@$_MALIK")
-	@Epic("EP001")
-	@Feature("Feature:001")
-	@Story("Login Test")
-	@Step("Use basic steps")
-	@Severity(SeverityLevel.CRITICAL)
+
+	@Test(priority = 1, description = "Order Test#2", enabled = true, invocationCount = 1)
+	@Description("Verify that user is able to update the Shopping Cart Successfully")
+	@Epic("Order_EP001")
+	@Feature("Order_002")
+	@Story("Verify that user is able to update the Shopping Cart Successfully")
+	@Step("Login>>Home>>Select Computers Category>>Select Apple Notebook>>Select Any Apple Product>>Update No of Items>>Update the cart")
+	@Severity(SeverityLevel.BLOCKER)
 	@Attachment()
 	public void VerifythatUserIsAbleToUpdateShoppingCart() throws InterruptedException {
 		order.PlaceOrderofAppleNotebook();
 		order.updateCart();
-	//	String ExpectedUrl="https://demo.nopcommerce.com/cart";
-	//	Assert.assertEquals(true, driver.getCurrentUrl()==ExpectedUrl);
+		// String ExpectedUrl="https://demo.nopcommerce.com/cart";
+		// Assert.assertEquals(true, driver.getCurrentUrl()==ExpectedUrl);
 	}
 
-	@Test(priority = 1, description = "Order Test#3", enabled = false, invocationCount = 1)
-	@Description("Verify test using these credentials: Email:Tteesstt@gmail.com  password: @1**^%$#@$_MALIK")
-	@Epic("EP001")
-	@Feature("Feature:001")
-	@Story("Login Test")
-	@Step("Use basic steps")
-	@Severity(SeverityLevel.CRITICAL)
+	@Test(priority = 1, description = "Order Test#3", enabled = true, invocationCount = 1)
+	@Description("Verify that user is able to place order of Mobile sucessfully")
+	@Epic("Order_EP001")
+	@Feature("Order_003")
+	@Story("Verify that user is able to place order of Mobile sucessfully")
+	@Step("Login>>Home>>Select Mobile Phone Category>>Select Any Apple Product")
+	@Severity(SeverityLevel.NORMAL)
 	@Attachment()
 	public void VerifyplaceOrderofMobilePhone() throws InterruptedException {
 		order.PlaceOrderofNokiaPhone();
-	//	order.viewCart();
-	//	String ExpectedUrl="https://demo.nopcommerce.com/cart";
-	//	Assert.assertEquals(true, driver.getCurrentUrl()==ExpectedUrl);
+		// order.viewCart();
+		// String ExpectedUrl="https://demo.nopcommerce.com/cart";
+		// Assert.assertEquals(true, driver.getCurrentUrl()==ExpectedUrl);
 	}
 
-	@Test(priority = 1, description = "Order Test#4", enabled = false, invocationCount = 1)
-	@Description("Verify test using these credentials: Email:Tteesstt@gmail.com  password: @1**^%$#@$_MALIK")
-	@Epic("EP001")
-	@Feature("Feature:001")
-	@Story("Login Test")
-	@Step("Use basic steps")
-	@Severity(SeverityLevel.CRITICAL)
+	@Test(priority = 1, description = "Order Test#4", enabled = true, invocationCount = 1)
+	@Description("Verify that user is able to place order of Desktop sucessfully")
+	@Epic("Order_EP001")
+	@Feature("Order_004")
+	@Story("Verify that user is able to place order of Desktop sucessfully")
+	@Step("Login>>Home>>Select Computers Category>>Select SubCategory Desktop>>Select Any Desktop Product")
+	@Severity(SeverityLevel.MINOR)
 	@Attachment()
 	public void VerifyplaceOrderOfDesktop() throws InterruptedException {
 		order.PlaceOrderofDesktop();
 		order.viewCart();
-	//	String ExpectedUrl="https://demo.nopcommerce.com/cart";
-	//	Assert.assertEquals(true, driver.getCurrentUrl()==ExpectedUrl);
+		// String ExpectedUrl="https://demo.nopcommerce.com/cart";
+		// Assert.assertEquals(true, driver.getCurrentUrl()==ExpectedUrl);
 	}
 
 	@AfterTest

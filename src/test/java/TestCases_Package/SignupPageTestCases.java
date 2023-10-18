@@ -4,6 +4,14 @@ import org.testng.annotations.Test;
 
 import Pages_Package.BaseClass;
 import Pages_Package.SignupPage;
+import io.qameta.allure.Attachment;
+import io.qameta.allure.Description;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.Step;
+import io.qameta.allure.Story;
 
 import org.testng.annotations.BeforeTest;
 
@@ -24,8 +32,14 @@ public class SignupPageTestCases extends BaseClass {
 		register = new SignupPage(driver);
 		register.Precondition();
 	}
-
-	@Test
+	@Test(priority = 1, description = "Signup Test#1", enabled = true, invocationCount = 1)
+	@Description("Verify that user is able to register himself successfully")
+	@Epic("Singup_EP001")
+	@Feature("Signup_001")
+	@Story("Verify that user is able to register himself successfully")
+	@Step("Signup>>Home page")
+	@Severity(SeverityLevel.CRITICAL)
+	@Attachment()
 	public void Testcases_ToRegisterUserSuccessfully() throws IOException {
 
 		register.Precondition();
