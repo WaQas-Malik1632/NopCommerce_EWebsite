@@ -1,7 +1,6 @@
 package TestCases_Package;
 
 import org.testng.annotations.Test;
-
 import Pages_Package.BaseClass;
 import Pages_Package.LoginPage;
 import Pages_Package.SignupPage;
@@ -16,11 +15,15 @@ import io.qameta.allure.Story;
 
 import org.testng.annotations.BeforeTest;
 import java.util.concurrent.TimeUnit;
+
+import org.aspectj.lang.annotation.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.SkipException;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeSuite;
 
 public class LoginTestcases extends BaseClass {
 	private WebDriver driver;
@@ -36,7 +39,7 @@ public class LoginTestcases extends BaseClass {
 		register.Precondition();
 	}
 
-	@Test(priority = 1, description = "Login Test#1", enabled = true, invocationCount = 1)
+	@Test(priority = 1, description = "Login_TC001", enabled = true, invocationCount = 1)
 	@Description("Verify test using these credentials: Email:Tteesstt@gmail.com  password: @1**^%$#@$_MALIK")
 	@Epic("EP001")
 	@Feature("Feature:001")
@@ -48,7 +51,7 @@ public class LoginTestcases extends BaseClass {
 		login.Precondition();
 		login.Login_Testcases("Test@gmail.com ", "@1**^%$#@$_MALIK");
 
-		// driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.manage().timeouts().pageLoadTimeout(05, TimeUnit.SECONDS);
 
 		// To validate whether user is successfully Registered or not
 		String ExpectedUrl = "https://demo.nopcommerce.com/login?returnUrl=%2F";
@@ -57,7 +60,7 @@ public class LoginTestcases extends BaseClass {
 		}
 	}
 
-	@Test(priority = 2, description = "Login Test#2", enabled = true, invocationCount = 1)
+	@Test(priority = 2, description = "Login_TC002", enabled = true, invocationCount = 1)
 	@Description("Verify test using these credentials: Email:Testuser@gmail.com  password:Test@123")
 	@Epic("EP001")
 	@Feature("Feature:001")
@@ -77,7 +80,7 @@ public class LoginTestcases extends BaseClass {
 	}
 
 	// Enter wrong Email and wrong Password
-	@Test(priority = 3, description = "Login Test#3", enabled = true, invocationCount = 1)
+	@Test(priority = 3, description = "Login_TC003", enabled = true, invocationCount = 1)
 	@Description("Verify test using these credentials: Email:Test@gmail.com  password: @1_)()**^%$#@$msd_MALIK")
 	@Epic("EP001")
 	@Feature("Feature:001")
@@ -106,7 +109,7 @@ public class LoginTestcases extends BaseClass {
 	}
 
 	// Enter wrong Email and wrong Password
-	@Test(priority = 4, description = "Login Test#4", enabled = true, invocationCount = 1)
+	@Test(priority = 4, description = "Login_TC004", enabled = true, invocationCount = 1)
 	@Description("Verify test using these credentials: Email:Test@gmail.com  password: @1_)()**^%$#@$msd_MALIK")
 	@Epic("EP001")
 	@Feature("Feature:001")
@@ -116,7 +119,9 @@ public class LoginTestcases extends BaseClass {
 	@Attachment()
 	public void Verify_UserDoesnotExistInSystem_SignupNewForAccount() {
 		// throw new SkipException("Skipped");
-		driver.manage().timeouts().implicitlyWait(05, TimeUnit.SECONDS);
+
+		driver.manage().timeouts().pageLoadTimeout(05, TimeUnit.SECONDS);
+
 		login.Precondition();
 		login.Login_Testcases("usernewtest@gmail.com", "ZXCv@123");
 

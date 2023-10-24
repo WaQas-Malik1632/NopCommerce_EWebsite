@@ -12,7 +12,8 @@ import org.openqa.selenium.interactions.Actions;
 public class OrderAndCartPage {
 
 	private WebDriver driver;
-	// =======================All menu items are initialized here=================================================
+	// =======================All menu items are initialized
+	// here=================================================
 	By Computers = By.xpath("//ul[@class='top-menu notmobile']//a[normalize-space()='Computers']");
 	By Electronics = By.xpath("//ul[@class='top-menu notmobile']//a[normalize-space()='Electronics']");
 	By Apparel = By.xpath("//ul[@class='top-menu notmobile']//a[normalize-space()='Apparel']");
@@ -40,7 +41,8 @@ public class OrderAndCartPage {
 	By AppleShoppingCart = By.xpath("//span[@class='cart-label']");
 
 	// =============Desktops relevent details====================
-	By Lenovo_IdeaCentrePC = By.xpath("//div[@class='picture']//img[@title='Show details for Lenovo IdeaCentre 600 All-in-One PC']");
+	By Lenovo_IdeaCentrePC = By
+			.xpath("//div[@class='picture']//img[@title='Show details for Lenovo IdeaCentre 600 All-in-One PC']");
 	By DesktopAddToCart = By.xpath("//button[@id='add-to-cart-button-3']");
 	By DesktopShoppingCart = By.xpath("//a[normalize-space()='shopping cart']");
 
@@ -62,7 +64,8 @@ public class OrderAndCartPage {
 		WebElement Desktops = driver.findElement(Desktop);
 		Desktops.click();
 
-		Thread.sleep(2000);
+		driver.manage().timeouts().pageLoadTimeout(05, TimeUnit.SECONDS);
+		
 		WebElement DesktopName = driver.findElement(Lenovo_IdeaCentrePC);
 		DesktopName.click();
 
@@ -82,7 +85,6 @@ public class OrderAndCartPage {
 		WebElement Notebook = driver.findElement(Notebooks);
 		Notebook.click();
 
-		Thread.sleep(2000);
 		WebElement NotebookName = driver.findElement(Apple_MacBook_Pro_13_inch);
 		NotebookName.click();
 
@@ -128,17 +130,18 @@ public class OrderAndCartPage {
 		js1.executeScript("window.scrollBy(0,200)");
 
 	}
-	public void updateCart()
-	{
-		WebElement UpdateQuantity=driver.findElement(By.xpath("/html/body/div[6]/div[3]/div/div/div/div[2]/div/form/div[1]/table/tbody/tr/td[5]/input"));
+
+	public void updateCart() {
+		WebElement UpdateQuantity = driver.findElement(
+				By.xpath("/html/body/div[6]/div[3]/div/div/div/div[2]/div/form/div[1]/table/tbody/tr/td[5]/input"));
 		UpdateQuantity.click();
 		UpdateQuantity.sendKeys(Keys.CLEAR);
 		UpdateQuantity.sendKeys(Keys.BACK_SPACE);
 		UpdateQuantity.sendKeys("4");
-		
-		WebElement UpdateShoppingCart=driver.findElement(By.id("updatecart"));
+
+		WebElement UpdateShoppingCart = driver.findElement(By.id("updatecart"));
 		UpdateShoppingCart.click();
-		
+
 	}
 
 }
