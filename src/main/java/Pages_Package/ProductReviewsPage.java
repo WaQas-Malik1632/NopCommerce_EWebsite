@@ -1,9 +1,16 @@
 package Pages_Package;
 
+import java.time.Duration;
+import java.util.NoSuchElementException;
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
 
 public class ProductReviewsPage {
 
@@ -27,12 +34,13 @@ public class ProductReviewsPage {
 		this.driver = driver;
 	}
 
+	@SuppressWarnings("deprecation")
 	public void AddReviewsOfDesktop(String RvwTitle, String RvwMsg) throws InterruptedException {
 		Actions action = new Actions(driver);
 		WebElement ComputersMenu = driver.findElement(Computers);
 		action.moveToElement(ComputersMenu).click().perform();
 
-		Thread.sleep(2000);
+		driver.manage().timeouts().pageLoadTimeout(03, TimeUnit.SECONDS);
 		WebElement Desktops = driver.findElement(Desktop);
 		Desktops.click();
 
@@ -57,9 +65,16 @@ public class ProductReviewsPage {
 
 		WebElement Ratings = driver.findElement(Rating4);
 		Ratings.click();
+		
 
-		WebElement ReviewSubmit = driver.findElement(SubmitReview);
-		ReviewSubmit.click();
+	//	WebElement ReviewSubmit = driver.findElement(SubmitReview);
+		
+		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
+			    .withTimeout(Duration.ofSeconds(30))
+			    .pollingEvery(Duration.ofSeconds(5))
+			    .ignoring(NoSuchElementException.class);
+			WebElement ReviewSubmit = wait.until(ExpectedConditions.visibilityOfElementLocated(SubmitReview));
+			ReviewSubmit.click();
 
 	}
 

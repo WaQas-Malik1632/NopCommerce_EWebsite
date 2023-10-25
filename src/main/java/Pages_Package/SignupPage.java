@@ -60,8 +60,6 @@ public class SignupPage {
 
 		WebElement Confpass = driver.findElement(txt_confirm_Password);
 		Confpass.sendKeys(ConfPassword);
-
-		// js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
 		
 //		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", btnReg);
 
