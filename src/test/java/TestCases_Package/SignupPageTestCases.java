@@ -32,7 +32,8 @@ public class SignupPageTestCases extends BaseClass {
 		register = new SignupPage(driver);
 		register.Precondition();
 	}
-	@Test(priority = 1, description = "Signup Test#1", enabled = true, invocationCount = 1)
+
+	@Test(priority = 1, description = "Signup TC001", enabled = true, invocationCount = 1)
 	@Description("Verify that user is able to register himself successfully")
 	@Epic("Singup_EP001")
 	@Feature("Signup_001")

@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
@@ -37,6 +38,7 @@ public class BaseClass {
 		ChromeDriver driver = new ChromeDriver();
 		driver.get(Url);
 		driver.manage().window().maximize();
+		driver.manage().timeouts().pageLoadTimeout(05, TimeUnit.SECONDS);
 
 		return driver;
 	}
@@ -53,6 +55,7 @@ public class BaseClass {
 		driver.get(Url);
 		driver.manage().window().maximize();
 
+		driver.manage().timeouts().implicitlyWait(05, TimeUnit.SECONDS);
 		return driver;
 	}
 
@@ -62,34 +65,22 @@ public class BaseClass {
 	}
 
 	/*
-	@Parameters("browser")
-	@BeforeTest
-	public WebDriver SetupCrossBrowser(@Optional("defaultBrowser") String browser) {
-		if (browser.equalsIgnoreCase("Firefox")) {
-			WebDriverManager.firefoxdriver().setup();
-			driver = new FirefoxDriver();
-			driver.manage().window().maximize();
-			driver.get(Url);
-
-		} else if (browser.equalsIgnoreCase("Edge")) {
-			WebDriverManager.edgedriver().setup();
-			driver = new EdgeDriver();
-			driver.manage().window().maximize();
-			driver.get(Url);
-		} else if (browser.equalsIgnoreCase("Opera")) {
-			WebDriverManager.operadriver().setup();
-			driver = new EdgeDriver();
-			driver.manage().window().maximize();
-			driver.get(Url);
-		} else {
-			WebDriverManager.chromedriver().setup();
-			driver = new ChromeDriver();
-			driver.manage().window().maximize();
-			driver.get(Url);
-		}
-		return driver;
-	}
-	*/
+	 * @Parameters("browser")
+	 * 
+	 * @BeforeTest public WebDriver SetupCrossBrowser(@Optional("defaultBrowser")
+	 * String browser) { if (browser.equalsIgnoreCase("Firefox")) {
+	 * WebDriverManager.firefoxdriver().setup(); driver = new FirefoxDriver();
+	 * driver.manage().window().maximize(); driver.get(Url);
+	 * 
+	 * } else if (browser.equalsIgnoreCase("Edge")) {
+	 * WebDriverManager.edgedriver().setup(); driver = new EdgeDriver();
+	 * driver.manage().window().maximize(); driver.get(Url); } else if
+	 * (browser.equalsIgnoreCase("Opera")) { WebDriverManager.operadriver().setup();
+	 * driver = new EdgeDriver(); driver.manage().window().maximize();
+	 * driver.get(Url); } else { WebDriverManager.chromedriver().setup(); driver =
+	 * new ChromeDriver(); driver.manage().window().maximize(); driver.get(Url); }
+	 * return driver; }
+	 */
 
 	// Take Screenshot
 	public WebDriver TakeScreenshot(WebDriver webdriver, String filename) throws IOException {
@@ -98,5 +89,5 @@ public class BaseClass {
 		FileUtils.copyFile(srcfile, new File(".//Screenshot//" + formattedDate + filename + ".png"));
 		return webdriver;
 	}
-	
+
 }

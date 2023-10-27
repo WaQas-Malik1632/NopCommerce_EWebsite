@@ -32,7 +32,7 @@ public class OrderAndCartPageTestCases extends BaseClass {
 		order = new OrderAndCartPage(driver);
 	}
 
-	@Test(priority = 1, description = "Order Test#1", enabled = true, invocationCount = 1)
+	@Test(priority = 1, description = "Order_TC001", enabled = true, invocationCount = 1)
 	@Description("Verify that user is able to place order of Apple Note Book sucessfully")
 	@Epic("Order_EP001")
 	@Feature("Order_001")
@@ -45,7 +45,7 @@ public class OrderAndCartPageTestCases extends BaseClass {
 		order.viewCart();
 	}
 
-	@Test(priority = 1, description = "Order Test#2", enabled = true, invocationCount = 1)
+	@Test(priority = 1, description = "Order_TC002", enabled = true, invocationCount = 1)
 	@Description("Verify that user is able to update the Shopping Cart Successfully")
 	@Epic("Order_EP001")
 	@Feature("Order_002")
@@ -60,7 +60,7 @@ public class OrderAndCartPageTestCases extends BaseClass {
 		// Assert.assertEquals(true, driver.getCurrentUrl()==ExpectedUrl);
 	}
 
-	@Test(priority = 1, description = "Order Test#3", enabled = true, invocationCount = 1)
+	@Test(priority = 1, description = "Order_TC003", enabled = true, invocationCount = 1)
 	@Description("Verify that user is able to place order of Mobile sucessfully")
 	@Epic("Order_EP001")
 	@Feature("Order_003")
@@ -75,7 +75,7 @@ public class OrderAndCartPageTestCases extends BaseClass {
 		// Assert.assertEquals(true, driver.getCurrentUrl()==ExpectedUrl);
 	}
 
-	@Test(priority = 1, description = "Order Test#4", enabled = true, invocationCount = 1)
+	@Test(priority = 1, description = "Order_TC004", enabled = true, invocationCount = 1)
 	@Description("Verify that user is able to place order of Desktop sucessfully")
 	@Epic("Order_EP001")
 	@Feature("Order_004")
