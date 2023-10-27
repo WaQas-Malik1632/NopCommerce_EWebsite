@@ -63,7 +63,7 @@ public class LoginPage {
 		String actualUrl = driver.getCurrentUrl();
 		String expectrdUrl = "https://demo.nopcommerce.com/login?returnUrl=%2F";
 
-		boolean cond = true;
+		boolean cond = false;
 		if (actualUrl.equalsIgnoreCase(expectrdUrl)) {
 			cond = true;
 			System.out.println(cond + " User logged in scccessfully");
