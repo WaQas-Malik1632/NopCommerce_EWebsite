@@ -21,8 +21,8 @@ public class ProductReviewsPage {
 	By Desktop = By.xpath("//img[@title='Show products in category Desktops']");
 	By Custom_Desktop = By.xpath("//div[@class='picture']//img[@title='Show details for Build your own computer']");
 	By AddCart = By.xpath("//button[@id='add-to-cart-button-1']");
-	
-	By CheckItemsCart=By.xpath("//span[@class='cart-label']");
+
+	By CheckItemsCart = By.xpath("//span[@class='cart-label']");
 
 	By errorForRAM = By.xpath("//p[normalize-space()='Please select RAM']");
 	By errorForHDD = By.xpath("//p[normalize-space()='Please select HDD']");
@@ -78,13 +78,11 @@ public class ProductReviewsPage {
 		WebElement RAM400GB = driver.findElement(Radio_400GBHDD);
 		RAM400GB.click();
 
-		System.out.println("Selected option is: " + driver.getTitle());
-		
 		WebElement AddCartbtn = driver.findElement(AddCart);
 		AddCartbtn.click();
-		
-	//	WebElement CartClick=driver.findElement(CheckItemsCart);
-	//	CartClick.click();
+
+		// WebElement CartClick=driver.findElement(CheckItemsCart);
+		// CartClick.click();
 
 	}
 

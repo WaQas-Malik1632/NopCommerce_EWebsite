@@ -35,7 +35,7 @@ public class ReviewPageTestCases extends BaseClass {
 		register = new SignupPage(driver);
 		reviews = new ProductReviewsPage(driver);
 	}
-	
+
 	@Test(priority = 1, description = "Review_TC001", enabled = true, invocationCount = 1)
 	@Description("Verify test logged in user is able to place order for the custom desktop")
 	@Epic("Review_EP001")
@@ -46,10 +46,8 @@ public class ReviewPageTestCases extends BaseClass {
 	@Attachment()
 	public void userIsAbletoPlaceOrderForCustomDesktop() throws InterruptedException {
 		reviews.CustomDesktopOrder();
-		
-		
+
 	}
-	
 
 	@Test(priority = 1, description = "Review_TC002", enabled = false, invocationCount = 1)
 	@Description("Verify test logged in user is able to submit the Review successfully")
