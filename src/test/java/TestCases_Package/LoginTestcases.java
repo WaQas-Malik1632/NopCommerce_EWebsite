@@ -51,11 +51,8 @@ public class LoginTestcases extends BaseClass {
 		login.Precondition();
 		login.Login_Testcases("Test@gmail.com ", "@1**^%$#@$_MALIK");
 
-<<<<<<< HEAD
-=======
 		driver.manage().timeouts().pageLoadTimeout(05, TimeUnit.SECONDS);
 
->>>>>>> 6e67c730c23d282ca2af94c615c592525f9deeb8
 		// To validate whether user is successfully Registered or not
 		String ExpectedUrl = "https://demo.nopcommerce.com/login?returnUrl=%2F";
 		if (driver.getCurrentUrl() == ExpectedUrl) {
