@@ -38,8 +38,8 @@ public class LoginTestcases extends BaseClass {
 
 	@Test(priority = 1, description = "Login Test#1", enabled = true, invocationCount = 1)
 	@Description("Verify test using these credentials: Email:Tteesstt@gmail.com  password: @1**^%$#@$_MALIK")
-	@Epic("EP001")
-	@Feature("Feature:001")
+	@Epic("Login_EP001")
+	@Feature("Login001")
 	@Story("Login Test")
 	@Step("Use basic steps")
 	@Severity(SeverityLevel.CRITICAL)
@@ -47,8 +47,6 @@ public class LoginTestcases extends BaseClass {
 	public void Testcase_VerifyLoginwith_bothWrongEmailandPassword() {
 		login.Precondition();
 		login.Login_Testcases("Test@gmail.com ", "@1**^%$#@$_MALIK");
-
-		// driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
 		// To validate whether user is successfully Registered or not
 		String ExpectedUrl = "https://demo.nopcommerce.com/login?returnUrl=%2F";
@@ -60,9 +58,9 @@ public class LoginTestcases extends BaseClass {
 	@Test(priority = 2, description = "Login Test#2", enabled = true, invocationCount = 1)
 	@Description("Verify test using these credentials: Email:Testuser@gmail.com  password:Test@123")
 	@Epic("EP001")
-	@Feature("Feature:001")
+	@Feature("Login002")
 	@Story("Login Test")
-	@Step("Use basic steps")
+	@Step("Use basic steps for login")
 	@Severity(SeverityLevel.CRITICAL)
 	@Attachment()
 	public void Testcase_VerifyLoginwith_bothCorrectEmailandPassword() {
@@ -80,7 +78,7 @@ public class LoginTestcases extends BaseClass {
 	@Test(priority = 3, description = "Login Test#3", enabled = true, invocationCount = 1)
 	@Description("Verify test using these credentials: Email:Test@gmail.com  password: @1_)()**^%$#@$msd_MALIK")
 	@Epic("EP001")
-	@Feature("Feature:001")
+	@Feature("Login003")
 	@Story("Login Test")
 	@Step("Use basic steps")
 	@Severity(SeverityLevel.CRITICAL)
@@ -109,7 +107,7 @@ public class LoginTestcases extends BaseClass {
 	@Test(priority = 4, description = "Login Test#4", enabled = true, invocationCount = 1)
 	@Description("Verify test using these credentials: Email:Test@gmail.com  password: @1_)()**^%$#@$msd_MALIK")
 	@Epic("EP001")
-	@Feature("Feature:001")
+	@Feature("Login004")
 	@Story("Login Test")
 	@Step("Use basic steps")
 	@Severity(SeverityLevel.CRITICAL)
