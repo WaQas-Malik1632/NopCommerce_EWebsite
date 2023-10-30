@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 
 public class SignupPage {
 	private WebDriver driver;
@@ -43,6 +44,22 @@ public class SignupPage {
 		WebElement Lastname = driver.findElement(txt_lastname);
 		Lastname.sendKeys(Lname);
 
+		// Select Date of Birthday
+		// Select Day
+		Select Day_Dropdown = new Select(driver.findElement(By.xpath("//select[@name='DateOfBirthDay']")));
+		Day_Dropdown.selectByVisibleText("10");
+		System.out.println("Selected option is: " + Day_Dropdown);
+
+		// Select Month
+		Select Month_Dropdown = new Select(driver.findElement(By.xpath("//select[@name='DateOfBirthMonth']")));
+		Month_Dropdown.selectByVisibleText("March");
+		System.out.println("Selected option is: " + Month_Dropdown);
+
+		// Select Year
+		Select Year_Dropdown = new Select(driver.findElement(By.xpath("//select[@name='DateOfBirthYear']")));
+		Year_Dropdown.selectByVisibleText("2014");
+		System.out.println("Selected option is: " + Year_Dropdown);
+
 		WebElement email = driver.findElement(txt_Email);
 		email.sendKeys(Email);
 
@@ -60,7 +77,7 @@ public class SignupPage {
 
 		WebElement Confpass = driver.findElement(txt_confirm_Password);
 		Confpass.sendKeys(ConfPassword);
-		
+
 //		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", btnReg);
 
 		WebElement btnReg = driver.findElement(btn_Register);
@@ -69,9 +86,10 @@ public class SignupPage {
 		// btnReg.getText();
 
 		// After signup click on continue button to go to home page
-		WebElement click_ContinueReg = driver.findElement(By.xpath("/html/body/div[6]/div[3]/div/div/div/div[2]/div[2]/a"));
+		WebElement click_ContinueReg = driver
+				.findElement(By.xpath("/html/body/div[6]/div[3]/div/div/div/div[2]/div[2]/a"));
 		click_ContinueReg.click();
-		//a[@class='ico-register']
+		// a[@class='ico-register']
 
 		return true;
 	}

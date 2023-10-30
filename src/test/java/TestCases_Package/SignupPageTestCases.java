@@ -41,7 +41,7 @@ public class SignupPageTestCases extends BaseClass {
 	@Step("Signup>>Home page")
 	@Severity(SeverityLevel.CRITICAL)
 	@Attachment()
-	public void Testcases_ToRegisterUserSuccessfully() throws IOException {
+	public void Testcases_ToVerifyRegisterUserSuccessfully() throws IOException {
 
 		register.Precondition();
 		register.SignUp_Form("Test", "user", "Test2667@gmail.com", "TestComp", "Test@123", "Test@123");

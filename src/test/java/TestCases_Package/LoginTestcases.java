@@ -14,6 +14,8 @@ import io.qameta.allure.Step;
 import io.qameta.allure.Story;
 
 import org.testng.annotations.BeforeTest;
+
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.aspectj.lang.annotation.Before;
@@ -39,7 +41,7 @@ public class LoginTestcases extends BaseClass {
 		register.Precondition();
 	}
 
-	@Test(priority = 1, description = "Login_TC001", enabled = true, invocationCount = 1)
+	@Test(priority = 1, description = "Login_TC001", enabled = true, invocationCount = 5)
 	@Description("Verify test using these credentials: Email:Tteesstt@gmail.com  password: @1**^%$#@$_MALIK")
 	@Epic("Login_EP001")
 	@Feature("Login001")
@@ -146,6 +148,12 @@ public class LoginTestcases extends BaseClass {
 		String ExpectedUrl = "https://demo.nopcommerce.com/";
 		if (driver.getCurrentUrl() == ExpectedUrl) {
 			Assert.assertTrue(true, "Test Passed");
+			try {
+				super.TakeScreenshot(driver, "TestScreenshot.png");
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 	}
 

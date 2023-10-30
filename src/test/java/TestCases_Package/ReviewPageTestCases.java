@@ -48,7 +48,6 @@ public class ReviewPageTestCases extends BaseClass {
 		reviews.CustomDesktopOrder();
 
 	}
-
 	@Test(priority = 1, description = "Review_TC002", enabled = false, invocationCount = 1)
 	@Description("Verify test logged in user is able to submit the Review successfully")
 	@Epic("Review_EP001")

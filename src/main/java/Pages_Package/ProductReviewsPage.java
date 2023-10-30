@@ -31,7 +31,6 @@ public class ProductReviewsPage {
 
 	By Radio_32GBHDD = By.xpath("//label[@for='product_attribute_3_6']");
 	By Radio_400GBHDD = By.xpath("//label[@for='product_attribute_3_7']");
-	
 
 	By AddReviewClick = By.xpath("//a[normalize-space()='Add your review']");
 	By ReviewTitle = By.xpath("//input[@id='AddProductReview_Title']");
