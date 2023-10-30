@@ -97,7 +97,7 @@ public class LoginTestcases extends BaseClass {
 		// To verify the sessionID
 		String sessionID = ((ChromeDriver) driver).getSessionId().toString();
 
-		System.out.println("Session ID: " + sessionID);
+		System.out.println("Session ID->" + sessionID);
 
 		if (sessionID == null) {
 			System.out.println("User is not registered with this Email. Kindly signup for new account");
@@ -151,7 +151,7 @@ public class LoginTestcases extends BaseClass {
 
 	@AfterTest
 	public void Teardown() {
-		System.out.print("Current Page Name is: " + driver.getTitle() + "\n" + driver.getCurrentUrl() + "\n");
+		System.out.print("Current Page Title is: " + driver.getTitle() + "\n" + driver.getCurrentUrl() + "\n");
 //		if (driver != null) {
 //			driver.quit();
 //		}

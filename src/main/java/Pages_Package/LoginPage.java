@@ -66,11 +66,10 @@ public class LoginPage {
 		boolean cond = false;
 		if (actualUrl.equalsIgnoreCase(expectrdUrl)) {
 			cond = true;
-			System.out.println(cond + " User logged in scccessfully");
+			System.out.println(cond + "-> User logged in scccessfully");
 		} else
-			cond = false;
-		System.out.println(cond + " User didn't log into the system scccessfully");
 
+			System.out.println(cond + "-> User didn't log into the system scccessfully");
 		return cond;
 
 	}

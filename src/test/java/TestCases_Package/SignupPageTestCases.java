@@ -59,6 +59,6 @@ public class SignupPageTestCases extends BaseClass {
 
 	@AfterTest
 	public void Teardown() {
-		System.out.print("Current Page Name is: " + driver.getTitle() + "\n" + driver.getCurrentUrl() + "\n");
+		System.out.print("Current Page Title is: " + driver.getTitle() + "\n" + driver.getCurrentUrl() + "\n");
 	}
 }

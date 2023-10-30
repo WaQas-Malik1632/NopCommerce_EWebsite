@@ -25,6 +25,7 @@ public class ProdutctListingPageTestCases {
 
 	@AfterTest
 	public void TearDown() {
+		System.out.print("Current Page Title is: " + driver.getTitle() + "\n" + driver.getCurrentUrl() + "\n");
 	}
 
 }

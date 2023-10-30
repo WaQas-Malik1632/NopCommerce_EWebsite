@@ -86,7 +86,7 @@ public class ReviewPageTestCases extends BaseClass {
 //		if (driver != null) {
 //			driver.quit();
 //		}
-		System.out.print("Current Page Name is: " + driver.getTitle() + "\n" + driver.getCurrentUrl() + "\n");
+		System.out.print("Current Page Title is: " + driver.getTitle() + "\n" + driver.getCurrentUrl() + "\n");
 
 	}
 }
