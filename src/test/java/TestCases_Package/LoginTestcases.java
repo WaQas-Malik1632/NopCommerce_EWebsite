@@ -144,7 +144,7 @@ public class LoginTestcases extends BaseClass {
 			System.out.println("User is registered with this email, you need to forgot password");
 		}
 
-		// To validate whether user is successfully Registered or not
+		// To check whether user is successfully Registered or not
 		String ExpectedUrl = "https://demo.nopcommerce.com/";
 		if (driver.getCurrentUrl() == ExpectedUrl) {
 			Assert.assertTrue(true, "Test Passed");
