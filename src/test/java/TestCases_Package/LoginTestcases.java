@@ -1,5 +1,4 @@
 package TestCases_Package;
-
 import org.testng.annotations.Test;
 import Pages_Package.BaseClass;
 import Pages_Package.LoginPage;
@@ -14,11 +13,9 @@ import io.qameta.allure.Step;
 import io.qameta.allure.Story;
 
 import org.testng.annotations.BeforeTest;
-
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
-import org.aspectj.lang.annotation.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
@@ -47,7 +44,7 @@ public class LoginTestcases extends BaseClass {
 	@Feature("Login001")
 	@Story("Login Test")
 	@Step("Use basic steps")
-	@Severity(SeverityLevel.CRITICAL)
+	@Severity(SeverityLevel.NORMAL)
 	@Attachment()
 	public void Testcase_VerifyLoginwith_bothWrongEmailandPassword() {
 		login.Precondition();
