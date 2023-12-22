@@ -49,6 +49,7 @@ public class LoginTestcases extends BaseClass {
 	public void Testcase_VerifyLoginwith_bothWrongEmailandPassword() {
 		login.Precondition();
 		login.Login_Testcases("Test@gmail.com ", "@1**^%$#@$_MALIK");
+		
 
 		driver.manage().timeouts().pageLoadTimeout(05, TimeUnit.SECONDS);
 
@@ -69,7 +70,8 @@ public class LoginTestcases extends BaseClass {
 	@Attachment()
 	public void Testcase_VerifyLoginwith_bothCorrectEmailandPassword() {
 		driver.manage().timeouts().implicitlyWait(05, TimeUnit.SECONDS);
-
+  
+		
 		login.Precondition();
 		login.Login_Testcases("Testuser@gmail.com", "Test@123");
 		String ExpectedUrl = "https://demo.nopcommerce.com/";
