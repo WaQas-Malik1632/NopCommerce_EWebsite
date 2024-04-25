@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Test"
+<testsuite name="Chrome Test"
            tests="3"
            failures="0"
            errors="0"
@@ -7,13 +7,13 @@
            time="0.000">
   <properties />
   
-            <testcase name="Teardown" time="0.0" classname="TestCases_Package.SignupPageTestCases">
-          <skipped />
-    </testcase>
             <testcase name="initiateBrowser" time="0.0" classname="TestCases_Package.SignupPageTestCases">
           <skipped />
     </testcase>
-            <testcase name="Testcases_ToRegisterUserSuccessfully" time="0.0" classname="TestCases_Package.SignupPageTestCases">
+            <testcase name="Teardown" time="0.0" classname="TestCases_Package.SignupPageTestCases">
+          <skipped />
+    </testcase>
+            <testcase name="Testcases_ToVerifyRegisterUserSuccessfully" time="0.0" classname="TestCases_Package.SignupPageTestCases">
           <skipped />
     </testcase>
   
