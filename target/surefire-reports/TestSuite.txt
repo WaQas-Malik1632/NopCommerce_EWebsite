@@ -1,16 +1,26 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 17, Failures: 1, Errors: 0, Skipped: 16, Time elapsed: 15.944 s <<< FAILURE! - in TestSuite
-TestCases_Package.OrderAndCartPageTestCases.initiateBrowser  Time elapsed: 15.183 s  <<< FAILURE!
-org.openqa.selenium.WebDriverException: 
-java.net.ConnectException: Failed to connect to localhost/[0:0:0:0:0:0:0:1]:7750
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'NX00605', ip: '10.44.0.45', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
-Driver info: driver.version: RemoteWebDriver
-	at TestCases_Package.OrderAndCartPageTestCases.initiateBrowser(OrderAndCartPageTestCases.java:23)
-Caused by: java.net.ConnectException: Failed to connect to localhost/[0:0:0:0:0:0:0:1]:7750
-	at TestCases_Package.OrderAndCartPageTestCases.initiateBrowser(OrderAndCartPageTestCases.java:23)
-Caused by: java.net.ConnectException: Connection refused: no further information
-	at TestCases_Package.OrderAndCartPageTestCases.initiateBrowser(OrderAndCartPageTestCases.java:23)
+Tests run: 22, Failures: 2, Errors: 0, Skipped: 20, Time elapsed: 23.99 s <<< FAILURE! - in TestSuite
+TestCases_Package.LoginTestcases.initiateBrowser  Time elapsed: 15.129 s  <<< FAILURE!
+org.openqa.selenium.remote.UnreachableBrowserException: 
+Error communicating with the remote browser. It may have died.
+Build info: version: '4.19.1', revision: 'abe0ee07dc'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f33bfe72f71dd38d5809c3b7ea4b65de, get [url]]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.79, chrome: {chromedriverVersion: 124.0.6367.78 (a087f2dd364d..., userDataDir: C:\Users\WAQAS~1.NAS\AppDat...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59037}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59037/devtoo..., se:cdpVersion: 124.0.6367.79, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f33bfe72f71dd38d5809c3b7ea4b65de
+	at TestCases_Package.LoginTestcases.initiateBrowser(LoginTestcases.java:37)
+Caused by: java.io.UncheckedIOException: java.io.IOException: HTTP/1.1 header parser received no bytes
+	at TestCases_Package.LoginTestcases.initiateBrowser(LoginTestcases.java:37)
+Caused by: java.io.IOException: HTTP/1.1 header parser received no bytes
+Caused by: java.net.SocketException: Connection reset
+
+TestCases_Package.ReviewPageTestCases.initiateBrowser  Time elapsed: 7.955 s  <<< FAILURE!
+java.lang.Error: 
+Unresolved compilation problem: 
+	The constructor WebDriverWait(WebDriver, int) is undefined
+
+	at TestCases_Package.ReviewPageTestCases.initiateBrowser(ReviewPageTestCases.java:34)
 

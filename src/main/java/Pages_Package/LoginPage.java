@@ -49,10 +49,11 @@ public class LoginPage {
 			throw (e);
 		}
 		System.out.println("Password field found");
-
+/*
 		WebDriverWait wait = new WebDriverWait(driver, 30);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(btn_login));
+		*/
 		// click on the login button as soon as the button is visible
 
 		WebElement b1 = driver.findElement(btn_login);

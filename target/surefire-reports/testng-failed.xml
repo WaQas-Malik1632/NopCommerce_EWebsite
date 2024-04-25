@@ -6,22 +6,27 @@
     <listener class-name="org.uncommons.reportng.HTMLReporter"/>
     <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
   </listeners>
-  <test thread-count="5" name="Test(failed)" verbose="0">
+  <test thread-count="5" name="Chrome Test(failed)" verbose="0">
+    <parameter name="browser" value="Chrome"/>
+    <parameter name="Environment" value="Staging Server"/>
     <classes>
       <class name="TestCases_Package.SignupPageTestCases">
         <methods>
           <include name="initiateBrowser"/>
-          <include name="Testcases_ToRegisterUserSuccessfully"/>
+          <include name="Testcases_ToVerifyRegisterUserSuccessfully"/>
           <include name="Teardown"/>
         </methods>
       </class> <!-- TestCases_Package.SignupPageTestCases -->
-      <class name="TestCases_Package.ReviewPageTestCases">
+      <class name="TestCases_Package.OrderAndCartPageTestCases">
         <methods>
-          <include name="beforeMethod"/>
+          <include name="VerifyplaceOrderofMobilePhone"/>
+          <include name="initiateBrowser"/>
+          <include name="VerifyplaceOrderOfAppleLaptop"/>
+          <include name="VerifythatUserIsAbleToUpdateShoppingCart"/>
+          <include name="VerifyplaceOrderOfDesktop"/>
           <include name="Teardown"/>
-          <include name="userIsAbleToSubmittReviweForDesktop"/>
         </methods>
-      </class> <!-- TestCases_Package.ReviewPageTestCases -->
+      </class> <!-- TestCases_Package.OrderAndCartPageTestCases -->
       <class name="TestCases_Package.LoginTestcases">
         <methods>
           <include name="usingSession_VerifyUserDoesnotExistInSystem_SignupNewForAccount"/>
@@ -29,23 +34,22 @@
           <include name="Testcase_VerifyLoginwith_bothCorrectEmailandPassword"/>
           <include name="Verify_UserDoesnotExistInSystem_SignupNewForAccount"/>
           <include name="Teardown"/>
-          <include name="beforeMethod"/>
+          <include name="initiateBrowser"/>
         </methods>
       </class> <!-- TestCases_Package.LoginTestcases -->
-      <class name="TestCases_Package.OrderAndCartPageTestCases">
+    </classes>
+  </test> <!-- Chrome Test(failed) -->
+  <test thread-count="5" name="Edge Test(failed)" verbose="0">
+    <parameter name="browser" value="Edge"/>
+    <parameter name="Environment" value="Production Server"/>
+    <classes>
+      <class name="TestCases_Package.ReviewPageTestCases">
         <methods>
+          <include name="userIsAbletoPlaceOrderForCustomDesktop"/>
           <include name="initiateBrowser"/>
-          <include name="VerifyplaceOrderofComputer"/>
           <include name="Teardown"/>
         </methods>
-      </class> <!-- TestCases_Package.OrderAndCartPageTestCases -->
-      <class name="TestCases_Package.ProdutctListingPageTestCases">
-        <methods>
-          <include name="TearDown"/>
-          <include name="initiateBrowser"/>
-          <include name="f"/>
-        </methods>
-      </class> <!-- TestCases_Package.ProdutctListingPageTestCases -->
+      </class> <!-- TestCases_Package.ReviewPageTestCases -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- Edge Test(failed) -->
 </suite> <!-- Failed suite [Smoke Suit] -->
